@@ -6,6 +6,7 @@
     <title>Local Pet Adoption Service Homepage</title>
 
 <style>
+    /* style header area */
     header {
         background: url("images/pexels-chevanon-1108099.jpg") 0px -125px no-repeat;
         background-size: 1400px; 
@@ -15,10 +16,11 @@
         font-weight: bold;
         font-family: Arial, Helvetica, sans-serif;
         font-size:50px; 
-        color:#fff
+        color:#fff;
     }
 
-    li {
+    /* style navigation */
+    .nav li {
         list-style-type: none;
         display: inline;
         padding: 5px 10px;
@@ -41,7 +43,7 @@
 
     li a:active {
         text-decoration: none;
-        color: #9933ff
+        color: #9933ff;
     }
 
     nav {
@@ -52,14 +54,23 @@
     }
 
     /* style the main content area */
-
     main {
     margin: 50px;
     }
 
-   
+    main h1 {
+    color: #668cff;
+    font-family: Arial, Helvetica, sans-serif
+    }
 
-
+    /* style footer area */
+    footer {
+    height: 30px;
+    background-color: rgb(129, 141, 179);
+    text-align: center;
+    padding-top: 10px;
+    color: rgb(211, 218, 240)
+    }
 
 </style> 
     
@@ -70,7 +81,7 @@
        Local Pet Adoption Service
     </header>
     <!--Navigation-->
-    <nav>
+    <nav class="nav">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="page2.html">Adoption Information</a></li>
@@ -94,7 +105,6 @@
                 <li>Meet in person with an Adoption Counselor.</li>
                 <li>Finalize the adoption.</li>
             </ol>
-            <img src="images/pexels-chevanon-1108099.jpg" alt="adopt a dog" width="400">
     </main>
     <br>
     <!--Footer-->
