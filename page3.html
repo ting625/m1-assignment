@@ -4,12 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Local Pet Adoption Service Homepage</title>
+
+<style>
+    /* style header area */
+    header {
+        background: url("images/pexels-chevanon-1108099.jpg") 0px -90px no-repeat;
+        background-size: 1400px; 
+        height: 400px;
+        padding-top: 60px; 
+        padding-left: 60px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 50px; 
+        color:#fff;
+        }
+    
+    /* style navigation */
+    li {
+        list-style-type: none;
+        display: inline;
+        padding: 5px 10px;
+    }
+
+    li a:link {
+        text-decoration: none;
+        color:#000000;
+    }
+
+    li a:visited {
+        text-decoration: none;
+        color: #000000;
+    }
+
+    li a:hover {
+        text-decoration: underline;
+        color: #0000ff;
+    }
+
+    li a:active {
+        text-decoration: none;
+        color: #9933ff;
+    }
+
+    nav {
+    background-color: rgb(255, 245, 238);
+    height: 50px;
+    text-align: center;
+    padding-top: 3px;
+    }
+
+    /* style the main content area */
+    main {
+        margin: 50px;
+    }
+
+    main h1 {
+        color: #668cff;
+        font-family: Arial, Helvetica, sans-serif
+    }
+
+    /* contact table */
+
+    label {
+    display: block; 
+    margin: 20px 0 0 0; /* top, right, bottom, left */
+    }
+
+    input, textarea {
+        width: 250px;
+    }
+
+    input[type="radio"] { /* attribute selector */
+        width: 30px;
+    }
+
+    input[type="submit"] {
+        display: block; 
+        margin: 20px 0 10px 0;
+        width: 100px;
+        background-color: #b57f76; 
+        border: 0px;
+        color: #ffffff; 
+        padding: 5px;
+        border-radius: 10px;
+        font-weight: bold;
+    }
+
+    input:focus {
+        background-color: gray;
+    }
+
+    /* style footer area */
+    footer {
+        height: 40px;
+        background-color: rgb(129, 141, 179);
+        text-align: center;
+        padding-top: 20px;
+        color: rgb(211, 218, 240)
+    }
+
+
+</style>
+
 </head>
 <body>
     <!--Header-->
     <header>
-       Local Pet Adoption Service
-    </header>
+        Local Pet Adoption Service
+     </header>
+
     <!--Navigation-->
     <nav>
         <ul>
@@ -18,42 +121,45 @@
             <li><a href="page3.html">Contact Us</a></li>
         </ul>
     </nav>
-    <!--Main Content-->
+
+
+
+    <!--Main Content-->   
     <main>
+        <H1>Contact Us</H1>
     <!--form-->
         <form action="/contact" method="post">
             <fieldset>
-                <legend>Contact Form</legend><>
-                <label>Enter your name</label><>
-                <input type="text" name="name"><>
-                <label>Enter your email</label><>
-                <input type="email" name="email"><>
-                <label>Enter your phone</label><>
-                <input type="tel" name="phone"><>
+                <legend>Contact Form</legend>
+                <label>Enter your name</label>
+                <input type="text" name="name">
+                <label>Enter your email</label>
+                <input type="email" name="email">
+                <label>Enter your phone</label>
+                <input type="tel" name="phone">
 
-                <>
-                <lable>How should we contact you?</lable>
+                
+                <label>How should we contact you?</label>
                 <input type="radio", name="contact", value="email">Email 
-                <input type="radio", name="contact", value="phone">Phone<>
+                <input type="radio", name="contact", value="phone">Phone
 
-                <>
-                <lable>Which location near from you?</lable>
+                
+                <label>Which location near from you?</label>
                 <select>
                     <option>Irvine</option>
                     <option>Tustin</option>
                     <option>Santa Ana</option>
-                </select><>
+                </select>
+              
+                <label>How can we help you?</label>
+                <textarea row="6" cols="30"></textarea>
 
-                <>
-                <label>How can we help you?</label><>
-                <textarea row="5" cols="30"></textarea>
-
-                <>
+                
                 <input type="submit" value="Inquire">
             </fieldset>
         </form>
     </main>
-    <>
+    
     <!--Footer-->
     <footer>
         Disclaimer: This project is for school homework only not for any commercial uses. 
