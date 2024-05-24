@@ -17,19 +17,68 @@
         <ul>
             <li><a href="home.html">Home</a></li>
             <li><a href="info.html">Adoption Information</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
             <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
 
     <!--Main Content-->
     <main>
+
+    <!--Gallery Album-->
+    <ul id="album">
+    <!--
+        <li id="photo"> <img src="images/dogs/dog-image-1.jpg"></li>
+        <li id="photo"> <img src="images/dogs/dog-image-2.jpg"></li>
+        <li id="photo"> <img src="images/dogs/dog-image-3.jpg"></li>
+        <li id="photo"> <img src="images/dogs/dog-image-4.jpg"></li>
+        <li id="photo"> <img src="images/dogs/dog-image-5.jpg"></li>
+        <li id="photo"> <img src="images/dogs/dog-image-6.jpg"></li>
+        <li id="photo"> <img src="images/dogs/dog-image-7.jpg"></li>
+        <li id="photo"> <img src="images/dogs/dog-image-8.jpg"></li>
+        <li id="photo"> <img src="images/dogs/dog-image-9.jpg"></li>
+        <li id="photo"> <img src="images/dogs/dog-image-10.jpg"></li>
+    -->
+   </ul>
+
          
     </main>
-    <br>
+
     <!--Footer-->
     <footer>
         Disclaimer: This project is for school homework only not for any commercial uses. 
     </footer>
+
+<!-- Gallery Script -->
+
+
+<script>
+    var photos = []; 
+    var filesNames = [];
+    var imageList = []; 
+    var image; 
+    var openList = '<li id="photo">';
+    var closeList = "</li>";
+
+    //create for loop to create the 6 images
+    for(var i=0; i<10; i++) {
+        //create file name and add to array
+        filesNames.push('dog-image-'+ (i+1));
+
+        console.log(filesNames); 
+        photos.push('<img src="images/dogs/' + filesNames[i] + '.jpg">');
+        image = openList + photos[i] + closeList;
+        imageList.push(image); 
+
+
+    }
+
+    //display our images
+    document.getElementById('album').innerHTML = imageList.join(" "); 
+
+</script>
+
+
+
 </body>
 </html>
