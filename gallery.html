@@ -12,6 +12,7 @@
     <header>
        Local Pet Adoption Service
     </header>
+
     <!--Navigation-->
     <nav class="nav">
         <ul>
@@ -25,39 +26,19 @@
     <!--Main Content-->
     <main>
 
-    <!--Gallery Album-->
-    <ul id="album">
-
-    <div class="container">
-        <img src="images/dogs/dog-image-1.jpg">
+        <!--Gallery Album-->
+        <ul id="album">
+        
+        <!--
+        <li class="container">
+            <img src="images/dogs/dog-image-1.jpg">
             <div class="caption">Bull dog</div>
             <div class="description">Bull dog is playing with toy</div>
-        </div>
-    </div>
-
-    <div class="container">
-        <img src="images/dogs/dog-image-1.jpg">
-            <div class="caption">Bull dog</div>
-            <div class="description">Bull dog is playing with toy</div>
-        </div>
-    </div>
-
-
-    <!--
-        <li id="photo"> <img src="images/dogs/dog-image-1.jpg"></li>
-        <li id="photo"> <img src="images/dogs/dog-image-2.jpg"></li>
-        <li id="photo"> <img src="images/dogs/dog-image-3.jpg"></li>
-        <li id="photo"> <img src="images/dogs/dog-image-4.jpg"></li>
-        <li id="photo"> <img src="images/dogs/dog-image-5.jpg"></li>
-        <li id="photo"> <img src="images/dogs/dog-image-6.jpg"></li>
-        <li id="photo"> <img src="images/dogs/dog-image-7.jpg"></li>
-        <li id="photo"> <img src="images/dogs/dog-image-8.jpg"></li>
-        <li id="photo"> <img src="images/dogs/dog-image-9.jpg"></li>
-        <li id="photo"> <img src="images/dogs/dog-image-10.jpg"></li>
-    -->
-   </ul>
-
-         
+        </li>
+        -->
+        
+        </ul>
+ 
     </main>
 
     <!--Footer-->
@@ -66,41 +47,37 @@
     </footer>
 
 <!-- Gallery Script -->
-
-<!--
 <script>
-    var photos = []; 
-    var filesNames = [];
-    var imageList = []; 
+    var OutputList = []; 
+    
     var image; 
-    var openList = '<li id="photo">';
-    var closeList = "</li>";
-
     var caption;
-    var caption_dog = ['Bull dog', 'Dog with a cap', 'Dog with a toy', 'White dog', 'Fluffy dog', 
+    var desc;
+    var descList = ['Bull dog', 'Dog with a cap', 'Dog with a toy', 'White dog', 'Fluffy dog', 
                        'Dog with a ball', 'Dogs fighting for a bone', 'Cute dog', 'Running dog', 'Dog with hoodie']
 
-    //create for loop to create the 6 images
+    //create for loop to create images
     for(var i=0; i<10; i++) {
         //create file name and add to array
-        filesNames.push('dog-image-'+ (i+1));
 
-        console.log(filesNames); 
-        photos.push('<img src="images/dogs/' + filesNames[i] + '.jpg">');
-        image = openList + photos[i] + closeList;
-        imageList.push(image); 
+        OutputList.push('<li class="container">');
 
-        caption = '<p>' + caption_dog[i] +  '</p>';
-        console.log(caption);
-        imageList.push(caption);
-    }
+        image = '<img src="images/dogs/dog-image-' + (i+1)  +'.jpg">'
+        OutputList.push(image); 
 
+        caption = '<div class="caption"> Dog Picture ' + (i+1) + '</div>';
+        OutputList.push(caption);
+
+        desc ='<div class="description">' + descList[i] + '</div>';
+        OutputList.push(desc);
+        
+        OutputList.push('</li>');
+        
+    }    
     //display our images
-    document.getElementById('album').innerHTML = imageList.join(" "); 
+    document.getElementById('album').innerHTML = OutputList.join(" "); 
 
 </script>
--->
-
 
 </body>
 </html>
