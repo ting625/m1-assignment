@@ -27,6 +27,22 @@
 
     <!--Gallery Album-->
     <ul id="album">
+
+    <div class="container">
+        <img src="images/dogs/dog-image-1.jpg">
+            <div class="caption">Bull dog</div>
+            <div class="description">Bull dog is playing with toy</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <img src="images/dogs/dog-image-1.jpg">
+            <div class="caption">Bull dog</div>
+            <div class="description">Bull dog is playing with toy</div>
+        </div>
+    </div>
+
+
     <!--
         <li id="photo"> <img src="images/dogs/dog-image-1.jpg"></li>
         <li id="photo"> <img src="images/dogs/dog-image-2.jpg"></li>
@@ -51,7 +67,7 @@
 
 <!-- Gallery Script -->
 
-
+<!--
 <script>
     var photos = []; 
     var filesNames = [];
@@ -59,6 +75,10 @@
     var image; 
     var openList = '<li id="photo">';
     var closeList = "</li>";
+
+    var caption;
+    var caption_dog = ['Bull dog', 'Dog with a cap', 'Dog with a toy', 'White dog', 'Fluffy dog', 
+                       'Dog with a ball', 'Dogs fighting for a bone', 'Cute dog', 'Running dog', 'Dog with hoodie']
 
     //create for loop to create the 6 images
     for(var i=0; i<10; i++) {
@@ -70,14 +90,16 @@
         image = openList + photos[i] + closeList;
         imageList.push(image); 
 
-
+        caption = '<p>' + caption_dog[i] +  '</p>';
+        console.log(caption);
+        imageList.push(caption);
     }
 
     //display our images
     document.getElementById('album').innerHTML = imageList.join(" "); 
 
 </script>
-
+-->
 
 
 </body>

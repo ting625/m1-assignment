@@ -121,9 +121,51 @@
         background-color: gray;
     }
 
-    /* gallery*/
-    /*
-    #photo img {
-    width: 50%
+    /* gallery */
+
+    ul {
+        list-style-type: none; 
     }
-    */
+
+    #album {
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container {
+        position: relative;
+        width: 45%;
+        text-align: center;
+        margin: 0 40px 1px 0px;
+    }
+    
+    .container img {
+        width: 100%;
+        display: inline;
+    }
+
+    .description {
+        background-color: #ffffff;
+        /*positioned relative to parent div (container) */
+            position: absolute;    
+            margin-left:25%;
+            margin-top: -50%;        
+            color: #000000;
+            width: 50%;
+            font-size: 16px;
+            padding: 10px 0;
+            text-align: center;
+        /*invisible because opacity is 0*/
+            opacity: 0;            
+            transition: 0.6s;
+    }
+
+    .container:hover .description {
+        /*becomes visible on hover*/
+            opacity:0.8; 
+    }
+
+
+
+
