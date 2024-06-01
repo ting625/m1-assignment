@@ -28,17 +28,27 @@
 
         <!--Gallery Album-->
         <ul id="album">
-        
-        <!--
+
+        <!---
         <li class="container">
             <img src="images/dogs/dog-image-1.jpg">
             <div class="caption">Bull dog</div>
-            <div class="description">Bull dog is playing with toy</div>
-        </li>
-        -->
+            <div class="description" id="des" onclick="myfunction()">Bull dog is playing with toy</div>
+        -->    
         
         </ul>
- 
+        </li>
+        </div>
+
+    <!---
+    <div class="box" id="popup">
+        <div class="heading">Snow Land</div>
+        <div class="text_info"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur dolorum cumque suscipit eaque tenetur animi iusto incidunt, 
+            debitis repudiandae inventore porro velit consequuntur tempore ad sunt vitae esse commodi quos.</p></div>
+        <div class="text_link">Click this to close</div>
+    </div>
+    -->
+
     </main>
 
     <!--Footer-->
@@ -46,18 +56,28 @@
         Disclaimer: This project is for school homework only not for any commercial uses. 
     </footer>
 
-<!-- Gallery Script -->
+
 <script>
     var OutputList = []; 
     
     var image; 
     var caption;
     var desc;
-    var descList = ['Bull dog', 'Dog with a cap', 'Dog with a toy', 'White dog', 'Fluffy dog', 
-                       'Dog with a ball', 'Dogs fighting for a bone', 'Cute dog', 'Running dog', 'Dog with hoodie']
+    var descList = [
+        'Bull dog', 
+        'Dog with a cap', 
+        'Dog with a toy', 
+        'White dog', 
+        'Fluffy dog', 
+        'Dog with a ball', 
+        'Dogs fighting for a bone', 
+        'Cute dog', 
+        'Running dog', 
+        'Dog with hoodie'
+    ]
 
     //create for loop to create images
-    for(var i=0; i<10; i++) {
+    for(var i=0; i<1; i++) {
         //create file name and add to array
 
         OutputList.push('<li class="container">');
@@ -68,7 +88,7 @@
         caption = '<div class="caption"> Dog Picture ' + (i+1) + '</div>';
         OutputList.push(caption);
 
-        desc ='<div class="description">' + descList[i] + '</div>';
+        desc ='<div class="description" id="des" onclick="myfunction()">' + descList[i] + '</div>';
         OutputList.push(desc);
         
         OutputList.push('</li>');
@@ -76,6 +96,20 @@
     }    
     //display our images
     document.getElementById('album').innerHTML = OutputList.join(" "); 
+
+</script>
+
+
+<script>
+    //open popup box
+
+    
+    function myfunction() {
+        document.getElementById('des');
+        popup.classList.toggle("show");
+}      
+    
+
 
 </script>
 

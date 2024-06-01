@@ -166,6 +166,33 @@
             opacity:0.8; 
     }
 
+    /* box */
+
+    .box {
+        position:relative;
+        background-color: #0e0a0b;
+        color: #ffffff;
+        opacity: 0.8;
+        max-width: 40%;
+        padding: 30px;
+        border-radius: 10px;
+
+        z-index:1;
+
+    }
+
+    .box .heading {
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+    .box .text_link {
+        color: #ffd966;
+        text-align: center;
+        padding: 30px;
+    }
+
+
 
 
 
