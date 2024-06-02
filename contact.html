@@ -36,12 +36,33 @@
                 <label>Enter your phone</label>
                 <input type="tel" name="phone">
 
-                
+                <!--change to dropdown menu              
                 <label>How should we contact you?</label>
                 <input type="radio", name="contact", value="email">Email 
                 <input type="radio", name="contact", value="phone">Phone
+                -->
 
-                
+                <label>How should we contact you?</label>
+                <select id="menu_sel">
+                    <option> Select One </option>
+                    <option> Email </option>
+                    <option> Phone </option>
+                </select>
+
+                <div id="menu_response">
+
+                </div>    
+
+                <!--
+                <div id="question_email">
+                    <label>Enter your email</label><input type="email" name="email">
+                </div>
+
+                <div id="question_phone">
+                    <label>Enter your phone</label><input type="tel" name="phone">
+                </div>
+                -->
+    
                 <label>Which location near from you?</label>
                 <select>
                     <option>Irvine</option>
@@ -62,5 +83,25 @@
     <footer>
         Disclaimer: This project is for school homework only not for any commercial uses. 
     </footer>
+    
+    <script>
+    
+    var codebox = document.getElementById("menu_sel"); //get textbox
+    codebox.addEventListener("input", ShowQuestion); //listen to code entered in textbox
+
+    function ShowQuestion() {
+        var x = document.getElementById("menu_sel").value;
+
+        if (x == "Email") {
+            document.getElementById("menu_response").innerHTML = '<label>Enter your email</label><input type="email" name="email">';
+        } else if ( x == "Phone") {
+            document.getElementById("menu_response").innerHTML = '<label>Enter your phone</label><input type="tel" name="phone">';
+        } else {
+            document.getElementById("menu_response").innerHTML = ' ';
+        }
+    
+    }
+    </script>
+
 </body>
 </html>
