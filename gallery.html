@@ -29,11 +29,11 @@
         <!--Gallery Album-->
         <ul id="album">
 
-        
+        <!--
         <li class="container">
             <img src="images/dogs/dog-image-1.jpg">
             <div class="caption">Dog Image 1</div>
-            <div class="description">
+            <div class="description"> 
                 <div class="popup" onclick="Openpopup()"> Bull Dog
                     <div class="popuptext" id="myPopup">
                         <p class="heading"> Dog Image 1 </p>
@@ -43,20 +43,12 @@
                 </div>
             </div>
         </li>
+        -->
 
         </ul>
 
         </div>
 
-    <!---
-    <div class="box">
-        
-        <div class="heading">Snow Land</div>
-        <div class="text_info"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur dolorum cumque suscipit eaque tenetur animi iusto incidunt, 
-            debitis repudiandae inventore porro velit consequuntur tempore ad sunt vitae esse commodi quos.</p></div>
-        <div class="text_link">Click this to close</div>
-    </div>
-    -->
 
     </main>
 
@@ -67,7 +59,7 @@
 
 
 <script>
-    /*
+    
     var OutputList = []; 
     
     var image; 
@@ -86,16 +78,22 @@
         'Dog with hoodie'
     ]
 
-
-    var box;
-    var boxList = [
-        'Testing popup' 
-
+    var text = [
+        'A bulldog stands on the grass with a colorful toy in its mouth, looking intently at the camera.',
+        'A black and white dog lies on the ground in the shade, surrounded by pine needles, with a yellow toy nearby.',
+        'A small white poodle stands on a gravel path, mouth open in a playful pant, looking towards the wooden steps.',
+        'A small, white, curly-haired dog standing on a rocky path.',
+        'A happy, fluffy dog running towards the camera on a grassy field.', 
+        'A brindle-coated dog playing with a yellow ball in a grassy area.', 
+        'Dogs are muscular and has a strong build, wearing a studded collar.',
+        'The dog has a cream-colored, curly coat and is wearing a blue collar.',
+        'The dog is playing in the park and playing very wet',
+        'A cheerful white dog with curly fur stands on a rocky path, looking up with its mouth open in excitement.'
     ]
 
     
     //create for loop to create images
-    for(var i=0; i<1; i++) {
+    for(var i=0; i<10; i++) {
         //create file name and add to array
 
         OutputList.push('<li class="container">');
@@ -103,12 +101,24 @@
         image = '<img src="images/dogs/dog-image-' + (i+1)  +'.jpg">'
         OutputList.push(image); 
 
-        caption = '<div class="caption"> Dog Picture ' + (i+1) + '</div>';
+        caption = '<div class="caption"> Dog Image ' + (i+1) + '</div>';
         OutputList.push(caption);
 
-        desc ='<div class="description">' + descList[i] + '<div>';
+        desc ='<div class="description" >';
         OutputList.push(desc);
 
+        OutputList.push('<div class="popup" onclick="Openpopup('+ i + ')">' + descList[i]);
+        OutputList.push('<div class="popuptext" id="myPopup' + i + '">');
+        OutputList.push('<p class="heading"> Dog Image ' +(i+1) + '</p>');
+        OutputList.push('<p class="text">' + text[i] + '</p>');
+        OutputList.push('<span onclick="Closepopup()" class="text_link"> Click this to close </span>');
+        
+
+        OutputList.push('</div>');
+        
+
+        OutputList.push('</div>');
+        OutputList.push('</div>');
         OutputList.push('</li>');
 
     } 
@@ -117,18 +127,19 @@
 
     //display our images
     document.getElementById('album').innerHTML = OutputList.join(" "); 
-    */
+    
     
 </script>
 
 <script>
     var from_close = false;
 
-    function Openpopup() {
+    function Openpopup(x) {
         console.log("Open");
         console.log('Value from close is ' + from_close);
 
-        var popup = document.getElementById("myPopup");
+        var popup = document.getElementById("myPopup" + x);
+        console.log("index is " + x);
 
         if (from_close == false) {
             popup.classList.add("show");
@@ -144,23 +155,6 @@
         console.log("Close");
         from_close = true;
     }
-
-    /*
-    //create popup box
-    const main = document.getELementById ("main")
-    main.innerHTML += 
-    <div class="box" id="popup">
-        <div class="heading">Snow Land</div>
-        <div class="text_info"><p>Lorem ipsum dolor sit, amet consectetur adipisicing 
-            elit. Pariatur dolorum cumque suscipit eaque tenetur animi iusto incidunt, 
-            debitis repudiandae inventore porro velit consequuntur tempore ad sunt 
-            vitae esse commodi quos.</p></div>
-
-        <a class="text_link" onclick="Openpopup">Click this to close</a>
-    </div>
-    */
-
-
 
 </script>
 

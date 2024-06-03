@@ -161,11 +161,14 @@
             transition: 0.6s;
     }
 
-    .container:hover .description {
+    
+    .description:hover {
         /*becomes visible on hover*/
-            opacity:0.8; 
+            opacity:0.8;
+            cursor:pointer;
     }
-
+    
+    
     /* box */
 
     /* The actual popup */
@@ -211,4 +214,3 @@
         -webkit-animation: fadeIn 1s;
         animation: fadeIn 1s;
     }
-  */
