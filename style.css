@@ -168,31 +168,47 @@
 
     /* box */
 
-    .box {
-        position:relative;
+    /* The actual popup */
+    .popup .popuptext {
+        visibility: hidden;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 400px;
         background-color: #0e0a0b;
         color: #ffffff;
-        opacity: 0.8;
-        max-width: 40%;
-        padding: 30px;
         border-radius: 10px;
-
-        z-index:1;
-
+        padding: 20px;
+        z-index: 1;
+        margin-left: -30%;
+        margin-top: -60%;
     }
 
-    .box .heading {
-        font-size: 28px;
+    .heading {
+        font-size: 26px;
         font-weight: 600;
+        padding:0px 15px 0px 15px;
+        text-align: left;
     }
 
-    .box .text_link {
+    .text {
+        padding:0px 15px 15px 15px;
+        text-align: left;
+    }
+
+    .text_link {
         color: #ffd966;
         text-align: center;
-        padding: 30px;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        cursor:pointer;
     }
 
-
-
-
-
+    /* Toggle this class - hide and show the popup */
+    .popup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+    }
+  */
