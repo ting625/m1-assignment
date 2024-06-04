@@ -171,7 +171,20 @@
     
     /* box */
 
+
     /* The actual popup */
+    .popup {
+/*      position: fixed;
+        z-index: 1000;
+        top: calc(50% - 100px);
+        left: calc(50% - 220px); */
+
+        position:absolute;
+        top: calc(50% - 150px);
+        left: calc(50% - 220px);
+        
+    }
+
     .popup .popuptext {
         visibility: hidden;
         position: absolute;

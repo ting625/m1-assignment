@@ -65,7 +65,7 @@
     var image; 
     var caption;
     var desc;
-    var descList = [
+    const descList = [
         'Bull dog', 
         'Dog with a cap', 
         'Dog with a toy', 
@@ -78,7 +78,7 @@
         'Dog with hoodie'
     ]
 
-    var text = [
+    const text = [
         'A bulldog stands on the grass with a colorful toy in its mouth, looking intently at the camera.',
         'A black and white dog lies on the ground in the shade, surrounded by pine needles, with a yellow toy nearby.',
         'A small white poodle stands on a gravel path, mouth open in a playful pant, looking towards the wooden steps.',
@@ -104,21 +104,21 @@
         caption = '<div class="caption"> Dog Image ' + (i+1) + '</div>';
         OutputList.push(caption);
 
-        desc ='<div class="description" >';
+        desc ='<div class="description" onclick="Openpopup (' + i + ')">'+ descList[i] + '</div>';
         OutputList.push(desc);
 
-        OutputList.push('<div class="popup" onclick="Openpopup('+ i + ')">' + descList[i]);
+        OutputList.push('<div class="popup">');
         OutputList.push('<div class="popuptext" id="myPopup' + i + '">');
         OutputList.push('<p class="heading"> Dog Image ' +(i+1) + '</p>');
         OutputList.push('<p class="text">' + text[i] + '</p>');
-        OutputList.push('<span onclick="Closepopup()" class="text_link"> Click this to close </span>');
+        OutputList.push('<span onclick="Closepopup('+ i + ')" class="text_link"> Click this to close </span>');
         
 
         OutputList.push('</div>');
         
 
         OutputList.push('</div>');
-        OutputList.push('</div>');
+        //OutputList.push('</div>');
         OutputList.push('</li>');
 
     } 
@@ -132,28 +132,18 @@
 </script>
 
 <script>
-    var from_close = false;
 
     function Openpopup(x) {
         console.log("Open");
-        console.log('Value from close is ' + from_close);
-
         var popup = document.getElementById("myPopup" + x);
-        console.log("index is " + x);
+        popup.classList.add("show");
 
-        if (from_close == false) {
-            popup.classList.add("show");
-        } else if (from_close == true){
-            popup.classList.remove("show");
-        }
-
-        // Reset variable
-        from_close = false;
     }
 
-    function Closepopup() {
+    function Closepopup(x) {
         console.log("Close");
-        from_close = true;
+        var popup = document.getElementById("myPopup" + x);
+        popup.classList.remove("show");
     }
 
 </script>
