@@ -38,8 +38,10 @@
 
         OutputList.push('<li class="container">');
 
-        image = '<img src="images/dogs/dog-image-' + (i+1)  +'.jpg">'
+        OutputList.push('<div id="photo"> <a href="#/" class="lightbox-toggle">'); 
+        image = '<img src="images/dogs/dog-image-' + (i+1)  +'.jpg" alt="Dog">'
         OutputList.push(image); 
+        OutputList.push('</a> </div>'); 
 
         caption = '<div class="caption"> Dog Image ' + (i+1) + '</div>';
         OutputList.push(caption);

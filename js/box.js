@@ -4,7 +4,6 @@ $(document).ready(function(){
     $('.lightbox-toggle img').click(function(){
         var index = $('.lightbox-toggle img').index(this);
         console.log(index);
-
         console.log("Clicked");
 
         $('.backdrop').animate({'opacity':'.50'}, 300, 'linear').css('display', 'block');
@@ -21,9 +20,9 @@ $(document).ready(function(){
         console.log($altvalue);
 
         if ($altvalue=="Dog") {
-            var img = $('#photo:nth-child(' + (index+1) +') img').clone(); //Duplicate DOM element
+            var img = $('#photo:nth-child(1) img').clone(); //Duplicate DOM element
             console.log(img);
-            $('.box').append(img); //Insert duplicated element in another element
+            $('.box').append(img[index]); //Insert duplicated element in another element
         }
     });
 
